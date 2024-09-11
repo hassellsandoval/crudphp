@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Vehículos</title>
+    <style>
+ /* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Asegura que todo esté en columna */
+    align-items: center;
+}
+
+/* Estilos para el contenedor de formularios */
+#formulario1, #formulario2, #formulario3 {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px; /* Espacio entre formularios */
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box; /* Evita que el padding afecte al ancho total */
+}
+
+/* Estilo del título del formulario */
+.h1-form {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Estilo de las etiquetas */
+.label-agg-p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Estilo de los inputs */
+.input-agg-p-B {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Estilo del botón */
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.input-agg-p {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.input-agg-p:hover {
+    background-color: #45a049;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <div id="formulario1">
+        <form action="conexion.php" method="post" class="form-agg-p-B">
+            <h1 class="h1-form">Registrar vehiculo</h1>
+            <label for="id_categoria" class="label-agg-p">placa</label>
+            <input type="text" id="placa" name="placa" required class="input-agg-p-B">
+
+            <label for="nombre" class="label-agg-p">color</label>
+            <input type="text" id="color" name="color" required class="input-agg-p-B">
+
+            <label for="nombre" class="label-agg-p">marca</label>
+            <input type="text" id="marca" name="marca" required class="input-agg-p-B">
+
+
+            <label for="tipo_vehiculo" class="label-agg-p">Tipo de Vehículo</label>
+            <select id="tipo_vehiculo" name="tipo_vehiculo" required class="input-agg-p-B">
+                <option value="" disabled selected>Selecciona el tipo de vehículo</option>
+                <option value="partucular">particular</option>
+                <option value="publico">publico</option>
+            </select>
+            
+
+            <div class="button-container">
+                <input type="submit" value="Guardar" class="input-agg-p">
+
+            </div>
+        </form>
+    </div>
+    
+
+    <div id="formulario2">
+        <form action="conexion.php" method="post" class="form-agg-p-B">
+            <h1 class="h1-form">Informacion del Propietario</h1>
+            <label for="id_categoria" class="label-agg-p">cedula</label>
+            <input type="number" id="cedula" name="cedula" required class="input-agg-p-B">
+
+            <label for="nombre" class="label-agg-p">primer_nombre</label>
+            <input type="text" id="primer_nombre" name="primer_nombre" required class="input-agg-p-B">
+
+            <label for="nombre" class="label-agg-p">segundo_nombre</label>
+            <input type="text" id="segundo_nombre" name="segundo_nombre" required class="input-agg-p-B">
+
+
+            <label for="nombre" class="label-agg-p">apellidos</label>
+            <input type="text" id="apellidos" name="apellidos" required class="input-agg-p-B">
+
+
+            <label for="nombre" class="label-agg-p">direccion</label>
+            <input type="text" id="direccion" name="direccion" required class="input-agg-p-B">
+
+
+            <label for="nombre" class="label-agg-p">telefono</label>
+            <input type="number" id="telefono" name="telefono" required class="input-agg-p-B">
+
+
+            <label for="nombre" class="label-agg-p">ciudad</label>
+            <input type="text" id="ciudad" name="ciudad" required class="input-agg-p-B">
+
+
+
+            <div class="button-container">
+                <input type="submit" value="Guardar" class="input-agg-p">
+
+            </div>
+        </form>
+    </div>
+
+    <div id="formulario3">
+        <form action="conexion.php" method="post" class="form-agg-p-B">
+            <h1 class="h1-form">Informacion del conductor </h1>
+            <label for="id_categoria" class="label-agg-p">cedula</label>
+            <input type="number" id="cedula" name="cedula" required class="input-agg-p-B">
+
+            <label for="nombre" class="label-agg-p">primer_nombre</label>
+            <input type="text" id="primer_nombre" name="primer_nombre" required class="input-agg-p-B">
+
+            <label for="nombre" class="label-agg-p">segundo_nombre</label>
+            <input type="text" id="segundo_nombre" name="segundo_nombre" required class="input-agg-p-B">
+
+
+            <label for="nombre" class="label-agg-p">apellidos</label>
+            <input type="text" id="apellidos" name="apellidos" required class="input-agg-p-B">
+
+
+            <label for="nombre" class="label-agg-p">direccion</label>
+            <input type="text" id="direccion" name="direccion" required class="input-agg-p-B">
+
+
+            <label for="nombre" class="label-agg-p">telefono</label>
+            <input type="number" id="telefono" name="telefono" required class="input-agg-p-B">
+
+
+            <label for="nombre" class="label-agg-p">ciudad</label>
+            <input type="text" id="ciudad" name="ciudad" required class="input-agg-p-B">
+
+
+
+            <div class="button-container">
+                <input type="submit" value="Guardar" class="input-agg-p">
+
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
